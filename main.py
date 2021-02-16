@@ -1,6 +1,14 @@
-game_board = [[0, 0, 0],
-              [0, 0, 0],
-              [0, 0, 0]]
+game = [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]
 
-for row in game_board:
-    print(row)
+
+def game_board():
+    print("   a  b  c")
+    for count, row in enumerate(game):
+        print(count, row)
+
+
+game[0][1] = 1
+
+game_board()
