@@ -19,5 +19,12 @@ def game_board(game_map, player=0, row=0, column=0, just_display=False):
         print("Something went wrong", e)
 
 
+def win(current_game):
+    for row in current_game:
+        print(row)
+        if row.count(row[0]) == len(row) and row[0] != 0:
+            print("winner")
+
+
 game = game_board(game, just_display=True)
 game = game_board(game, player=1, row=2, column=1)
