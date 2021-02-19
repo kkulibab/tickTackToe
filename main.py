@@ -36,5 +36,15 @@ def horizontal_win(current_game):
             print("Winner")
 
 
+def diagonal_win(current_game):
+    diagonal_1 = []
+    for col, row in enumerate(reversed(range(len(current_game)))):
+        diagonal_1.append(current_game[row][col])
+
+    diagonal_2 = []
+    for idx in range(len(current_game)):
+        diagonal_2.append(current_game[idx][idx])
+
+
 game = game_board(game, just_display=True)
 game = game_board(game, player=1, row=2, column=1)
